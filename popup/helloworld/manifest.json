@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "pop up -- hello, world",
+    "author": "You Qiang",
+    "version": "0.0.1",
+    "icons": {"128": "images/icon.png"},
+    "description": "hello world in a pop up style",
+    "permissions": ["tabs", "http://*/*", "https://*/*"],
+    "content_scripts": [{
+      "matches": ["http://*/*"],
+      "js":["js/content_script.js"]
+    }],
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon_19.png",
+            "38": "images/icon_38.png"
+        },
+        "default_title": "hello world",
+        "default_popup": "html/popup.html"
+    }
+}
